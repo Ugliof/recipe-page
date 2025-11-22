@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --White: hsl(0, 0%, 100%);
+
+    --Stone1: hsl(30, 54%, 90%);
+    --Stone2: hsl(30, 18%, 87%);
+    --Stone3: hsl(30, 10%, 34%);
+    --Stone4: hsl(24, 5%, 18%);
+
+    --Brownh2: hsl(14, 45%, 36%);
+
+    --Rosetime: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);
+    --font-family1: "Outfit", sans-serif;
+    --font-family2: "Young Serif", serif;
+}
+
+body {
+    background-color: hsl(13, 63%, 87%);
+    font-family: var(--font-family1);
+    min-height: 100vh;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--White);
+    padding: 1.5rem;
+}
+
+.card h1 {
+    
+}
+
+.omelette {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
