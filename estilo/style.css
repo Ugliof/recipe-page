@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 
 * {
+    
     margin: 0;
     box-sizing: border-box;
 }
@@ -11,7 +12,7 @@
 
     --White: hsl(0, 0%, 100%);
 
-    --Stone1: hsl(30, 54%, 90%);
+    --Stone1:  hsl(30, 54%, 90%);
     --Stone2: hsl(30, 18%, 87%);
     --Stone3: hsl(30, 10%, 34%);
     --Stone4: hsl(24, 5%, 18%);
@@ -25,27 +26,181 @@
 }
 
 body {
-    background-color: hsl(13, 63%, 87%);
+    background-color: var(--Stone1);
     font-family: var(--font-family1);
     min-height: 100vh;
     height: 100%;
 }
 
+/* == IMAGE MOBILE == */
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* == CARD == */
 .card {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     background-color: var(--White);
-    padding: 1.5rem;
+    min-width: 320px;
+    box-shadow: 1px 2px 12px hsla(26, 3%, 59%, 0.603);
+    line-height: 1.5rem;
+    padding: 2rem;
 }
 
+/* == TITLES == */
 .card h1 {
-    
+    font-family: var(--font-family2);
+    color: var(--Stone4);
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    margin-bottom: 1.4rem;
 }
 
-.omelette {
+h2 {
+    color: var(--Brownh2);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+
+/* == DESCRIÇÃO == */
+.descricao {
+    color: var(--Stone3);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* == PREPARATION TIME */
+.prepa-time {
+    background-color: var(--Stone1);
+    padding: 1.4rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.prepa-time h2 {
+    color: var(--Rosetime);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+
+.prepa-time ul {
+    padding-left: 1.8rem;
+}
+
+
+
+.prepa-time li {
+    color: var(--Stone3);
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
+/* == MARKER COLOR PREPA-TIME */
+.prepa-time li::marker {
+    color: var(--Rosetime);
+    font-weight: bold;
+}
+
+/* == INGREDIENTS == */
+.ingredients ul {
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+    padding-bottom: 1.5rem;
+}
+
+.ingredients li {
+    color: var(--Stone3);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+/* == INSTRUCTIONS */
+.instructions ol {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+    padding-bottom: 1.5rem;
+    padding-left: 1.3rem;
+}
+
+.instructions li {
+    color: var(--Stone3);
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* == LIST MARKERS COLOR == */
+ul li::marker,
+ol li::marker {
+    color: var(--Brownh2);
+    font-weight: bold;
+}
+
+/* == NUTRITION == */
+.nutrition p {
+    color: var(--Stone3);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* == TABLE == */
+table {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid var(--Stone2);
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table td {
+    padding: 12px 0;
+}
+
+.values {
+    color: var(--Brownh2);
+    font-weight: 700;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    .card {
+        max-width: 700px;
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 0 80px rgba (0, 0, 0, 0.05);
+    }
+
+    .image-container img {
+        border-radius: 10px;
+    }
 }
