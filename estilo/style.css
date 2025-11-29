@@ -32,7 +32,7 @@ body {
     height: 100%;
 }
 
-/* == IMAGE MOBILE == */
+/* == IMAGEM RECIPE PAGE == */
 
 .image-container img {
     width: 100%;
@@ -58,7 +58,7 @@ body {
 .card h1 {
     font-family: var(--font-family2);
     color: var(--Stone4);
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.4rem;
 }
